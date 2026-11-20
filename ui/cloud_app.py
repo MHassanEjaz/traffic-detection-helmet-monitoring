@@ -1,13 +1,14 @@
-
+import sys
 import os
 import tempfile
 from pathlib import Path
-
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 import streamlit as st
 from huggingface_hub import hf_hub_download
 
 
-ROOT = Path(__file__).resolve().parents[1]
+
 
 MODEL_FILES = {
     "vehicle": "yolo26n.pt",
